@@ -152,7 +152,7 @@ def args_to_dict(arg1, arg2, arg3):
     
 # BONUS: Write a function named args_to_dict_general that does the same for any
 # number of arguments
-def args_to_dict_general(args*):
+def args_to_dict_general(*args):
     loc = locals()    
     kwargs = dict()
     i = 0    
