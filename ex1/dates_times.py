@@ -75,13 +75,4 @@ def how_long(dt, ref):
     diff = "{0:02d} days, {1:02d} minutes, {2:02d} seconds".format(int(d[0]),int(m[0]),int(s))
     
     return diff+" "+("until "+str(ref) if future else "since "+str(dt))
-print how_long(date.datetime.now(), date.datetime.now())
 
-d1 = date.datetime(2000, 1, 1, 12, 34, 56)
-d2 = date.datetime(1985, 4, 23, 12, 0, 0)
-
-print "5366 days, 34 minutes, 56 seconds since 1985-04-23 12:00:00"
-print how_long(d1, d2) 
-
-print "5366 days, 34 minutes, 56 seconds until 2000-01-01 12:34:56"
-print how_long(d2, d1)

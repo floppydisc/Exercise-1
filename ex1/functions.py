@@ -77,24 +77,20 @@ def check_list(liste, n):
     rlist= list()
     for i in liste:
         rlist.append(i>=n)
-    print str(rlist)
     return rlist
     
 # Define a function named check_list_nth that does the same as check_list but
 # uses every nth element of the input list (including the first one). You will
 # need a third input argument.
 def check_list_nth(liste, n, index):
-    print 
     blist=list()
     ind = 1
     for i in liste:
         if ind == (index):
             blist.append(i>=n)
-            print str(ind)+" "+str(i)
             ind = 1
         else:
             ind+=1
-    print str(blist)
     return blist
 
 # Define a function named add_new_list that takes two inputs. A list l and a
@@ -113,8 +109,7 @@ def remove_nth(liste, nth = 2):
     rlist=list()
     ind = 0
     rlist = liste[:]
-    for i in liste:
-        print str(ind)+".:"+str(ind%nth)            
+    for i in liste:           
         if ind%nth == 0:
             rlist.remove(i)
         ind = ind+1
@@ -145,7 +140,6 @@ def args_to_dict(arg1, arg2, arg3):
     kwargs = dict()
     i = 0    
     for arg in loc:
-        print type(arg)
         kwargs[i]=loc.get(arg)
         i+=1
     return kwargs
@@ -157,10 +151,7 @@ def args_to_dict_general(*args):
     kwargs = dict()
     i = 0    
     for args in loc:
-        print str(args)
         for arg in args:
-            print type(arg)
-            print str(arg)
             kwargs[i]=arg
             i+=1
     return kwargs
@@ -201,7 +192,6 @@ def search_list(a,b):
 def dict_to_string(dic, sep):
     strstr = ""
     for key,value in dic.iteritems():
-        print type(value)
         if type(value) is str:
             if strstr == "":
                 strstr=value
